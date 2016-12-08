@@ -69,16 +69,28 @@
 </script>
 </head>
 <body>
+<style>
+fieldset { 
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 1px groove;
+
+}
+</style>
 	<br>
 	<br>
 	<center>
 		<font face="verdana" size="2"> <font size="4">Employee
 				Portal::: <font color="#809e02" size="5">More Information on
 					employees::</font>
-		</font> <br>
+		</font> 
 		<br>
-		<br>
-		<br> Provide Employee Name : <input type="text" id="empList"
+		<br> <b>Provide Employee Name :</b> <input type="text" id="empList"
 			name="empList" class="input_text" /> 
 			<button onclick="renderEmployeeData()">Search</button>
 

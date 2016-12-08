@@ -22,6 +22,19 @@
 %>
 
 <body>
+<style>
+fieldset { 
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 1px groove;
+
+}
+</style>
 <script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
 	<script >
 	$(document).ready(function() {
@@ -54,10 +67,10 @@
 			Name:<br> <input type="text" id="name" name="name" style="background-color:grey"
 				value="<%=dataSourceMap.get(identifier).getName()%>" readonly
 				maxlength="10" pattern="[A-Za-z\\s]*" title="Only Alphabets">
-			<br> Grade:<br> <input type="text" id="" name="grade"
+			<br> Grade:<br> <input type="text" id="" name="grade" required
 				value="<%=dataSourceMap.get(identifier).getGrade()%>"
 				maxlength="3" pattern="[A-Za-z0-9]*" title="Only AlphaNumerics">
-			<br> Phone #:<br> <input type="text" id="" name="phoneNo"
+			<br> Phone #:<br> <input type="text" id="" name="phoneNo" required
 				value="<%=dataSourceMap.get(identifier).getPhoneNumber()%>"
 				maxlength="10" pattern="[0-9]*" title="Only Numerics"> <br>
 			Address:<br> <input type="text" id="" name="address"
@@ -65,7 +78,7 @@
 				maxlength="20" pattern="[A-Za-z\\s]*" title="Only Alphabets">
 			<br>
 			<div>
-				Gender:<br> <input type="radio" id="mR" name="gender"  value="Male"> Male 
+				Gender:<br> <input type="radio" id="mR" name="gender"  value="Male" required > Male 
 							<input type="radio" id="fR"	name="gender" value="Female"> Female
 			</div>
 			<br> <input type="submit" name="submit" value="submit" />
